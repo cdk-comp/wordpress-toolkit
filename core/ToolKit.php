@@ -172,7 +172,7 @@ class ToolKit {
     */
   private function load_env_from_apth( $path ) {
     try {
-      $env = new \Dotenv\Dotenv( $path );
+      $env = \Dotenv\Dotenv::create( $path );
       $env->load();
     } catch ( \Dotenv\Exception\InvalidPathException $e ) {
     } catch ( Exception $e ) { }
